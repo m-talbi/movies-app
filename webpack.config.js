@@ -1,11 +1,10 @@
-const { resolve } = require('path');
 // eslint-disable-next-line
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // eslint-disable-next-line
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: ['./src/css/style.scss', './src/scripts/index.js'],
+  entry: ['./src/styles/index.scss', './src/modules/index.js'],
   module: {
     rules: [
       {
@@ -32,8 +31,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      title: 'Leaderboard',
-      template: resolve(__dirname, 'src', 'index.html'),
+      title: 'Movies App',
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
   ],
