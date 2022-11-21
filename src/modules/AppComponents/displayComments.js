@@ -3,7 +3,7 @@ import { getComments } from '../InvolvementService/InvolvementService.js';
 const generateComment = (comment) => `
     <article class="comment">
       <p><strong>${comment.username}</strong> - ${comment.creation_date}</p>
-      ${comment.comment}
+      <p>${comment.comment}</p>
     </article>
   `;
 
@@ -13,7 +13,7 @@ const renderComments = async (id, commentPopupEl) => {
   const commentsContainerEl = commentPopupEl.querySelector('.comment_cards__container');
   const commentsTitle = commentPopupEl.querySelector('h3');
 
-  commentsTitle.textContent = comments.length;
+  commentsTitle.textContent = `Comments (${comments.length})`;
 
   comments.forEach((comment) => {
     commentsContainerEl.insertAdjacentHTML('beforeend', generateComment(comment));

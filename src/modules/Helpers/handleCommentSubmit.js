@@ -6,11 +6,13 @@ const handleFormSubmit = async (form) => {
 
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault();
+    const userField = form.querySelector('#user-field');
+    const commentField = form.querySelector('#comment-field');
 
     const comment = {
-      item_id: form.closest('section').id,
-      username: form.user.value,
-      score: form.comment.value,
+      item_id: commentPopupEl.id,
+      username: userField.value,
+      comment: commentField.value,
     };
 
     form.reset();

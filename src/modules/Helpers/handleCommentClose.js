@@ -1,6 +1,7 @@
 export const handleOutsideClick = (component) => {
+  const card = component.querySelector('.card');
   document.addEventListener('click', (ev) => {
-    if (ev.target.closest('.card') === component) return;
+    if (ev.target.closest('.card') === card) return;
     component.remove();
   });
 };
