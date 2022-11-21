@@ -1,4 +1,4 @@
-import { AddComment } from '../InvolvmentService/InvolvmentService.js';
+import { AddComment } from '../InvolvementService/InvolvementService.js';
 import renderComments from '../AppComponents/displayComments.js';
 
 const handleFormSubmit = async (form) => {
