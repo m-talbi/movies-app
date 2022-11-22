@@ -58,7 +58,7 @@ global.fetch = jest.fn(() => Promise.resolve({
 }));
 
 describe('Comments counter', () => {
-  test('AddComment method should update the counter on the page', async () => {
+  test('AddComment and renderComments methods should update the counter on the page', async () => {
     document.body.innerHTML = `
      <section id="169" class="movie_popup__wrapper">
        <div class="movie__comments">
