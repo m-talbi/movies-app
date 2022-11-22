@@ -306,7 +306,6 @@ form {
     width: 90%;
   }
 }
-
 @media screen and (max-width: 1024px) {
   #close-popup-icon {
     position: absolute;
