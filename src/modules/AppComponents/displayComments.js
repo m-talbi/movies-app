@@ -11,6 +11,7 @@ const renderComments = async (id, commentPopupEl) => {
   const comments = await getComments(id);
 
   const commentsContainerEl = commentPopupEl.querySelector('.comment_cards__container');
+  commentsContainerEl.innerHTML = '';
   const commentsTitle = commentPopupEl.querySelector('h3');
 
   commentsTitle.textContent = `Comments (${comments.length})`;
