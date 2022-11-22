@@ -2,10 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { enableFetchMocks } from 'jest-fetch-mock';
-import renderCommentPopup from '../AppComponents/displayPopUp.js';
-
-enableFetchMocks();
+import renderComments from '../AppComponents/displayComments.js';
+import { AddComment } from '../InvolvementService/InvolvementService.js';
 
 const mockPopupData = [
   {
@@ -36,26 +34,56 @@ const mockPopupData = [
   },
 ];
 
+const mockResponse = [
+  {
+    creation_date: '2022-11-21',
+    username: 'Mohamed Talbi',
+    comment: 'Very good show, I like the ending',
+  },
+  {
+    comment: 'Cool show',
+    username: 'Peter',
+    creation_date: '2022-11-21',
+  },
+  {
+    creation_date: '2022-11-22',
+    username: 'Kweeka',
+    comment: 'Good show',
+  },
+];
+
+global.fetch = jest.fn(() => Promise.resolve({
+  ok: true,
+  json: () => Promise.resolve(mockResponse),
+}));
+
 describe('Comments counter', () => {
-  test('AddComment method should update the counter on the page', () => {
+  test('AddComment method should update the counter on the page', async () => {
     document.body.innerHTML = `
-      <main></main>
-    `;
+     <section id="169" class="movie_popup__wrapper">
+       <div class="movie__comments">
+         <h3>Comments (0)</h3>
+         <div class="comment_cards__container"></div>
+       </div>
+     </section>
+     `;
 
-    renderCommentPopup(mockPopupData[1]);
+    const popup = document.querySelector('section');
 
-    const form = document.querySelector('form');
-    const userField = document.getElementById('user-field');
-    const commentField = document.getElementById('comment-field');
+    const comment = {
+      item_id: mockPopupData[1].id,
+      username: 'Kweeka',
+      comment: 'Good show',
+    };
 
-    const initialCounterValue = document.querySelector('h3').textContent;
+    const initialCounterValue = document.querySelector('h3').textContent.match(/[0-9]/).join('');
 
-    userField.value = 'Mohamed Talbi';
-    commentField.value = 'Very good show, I like the ending';
-    form.submit();
+    await AddComment(comment);
+    await renderComments(mockPopupData[1].id, popup);
 
-    const updatedCounterValue = document.querySelector('h3').textContent;
+    const updatedCounterValue = document.querySelector('h3').textContent.match(/[0-9]/).join('');
 
+    expect(fetch).toHaveBeenCalledTimes(2);
     expect(initialCounterValue).not.toBe(updatedCounterValue);
   });
 });
