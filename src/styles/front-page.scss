@@ -1,6 +1,7 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #24242C;
+  background-color: #24242c;
   justify-content: center;
   padding: 1rem;
 }
@@ -25,7 +26,7 @@ header {
 }
 
 .nav-logo i {
-  color: #FFC300;
+  color: #ffc300;
   font-size: 40px;
 }
 
@@ -34,9 +35,10 @@ header {
   gap: 10px;
   align-items: center;
   text-decoration: none;
+
   & p {
     text-decoration: none;
-    color: #FFC300;
+    color: #ffc300;
     font-weight: 500;
     font-size: 30px;
   }
@@ -54,7 +56,7 @@ header {
 
 .menu-list .list-item a {
   text-decoration: none;
-  color: #CFCFD1;
+  color: #cfcfd1;
 }
 
 main {
@@ -62,16 +64,16 @@ main {
 }
 
 .main-section {
-  background-color: #2A272F;
+  background-color: #2a272f;
 }
 
 footer {
-  background-color: #24242C;
+  background-color: #24242c;
   padding: 1rem;
   text-align: center;
-  color: #CFCFD1;
+  color: #cfcfd1;
 }
 
 .footer-link {
-  color:#FFC300 !important;
+  color: #ffc300 !important;
 }
