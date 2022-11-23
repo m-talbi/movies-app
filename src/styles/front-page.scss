@@ -67,6 +67,65 @@ main {
   background-color: #2a272f;
 }
 
+.movies-list {
+  display: grid;
+  max-width: 90%;
+  margin: 30px auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  border: 1px solid #D0D9D4;
+  border-radius: 8px;
+  transition: transform 300ms ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+}
+
+.movie-card h3 {
+  color:#EBF0EE;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.movie-card li {
+  display: inline-block;
+  background: #EBF0EE;
+  border-radius: 4px;
+  color: #172B4D;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.card-footer {
+  padding: 10px;
+}
+
+.action {
+  text-align: center;
+  padding: 10px;
+}
+
+.action .card-btn {
+  width: 100px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #ffc300;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
 footer {
   background-color: #24242c;
   padding: 1rem;

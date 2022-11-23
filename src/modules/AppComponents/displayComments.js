@@ -5,7 +5,7 @@ const generateComment = (comment) => `
       <p><strong>${comment.username}</strong> - ${comment.creation_date}</p>
       <p>${comment.comment}</p>
     </article>
-  `;
+`;
 
 const renderComments = async (id, commentPopupEl) => {
   const comments = await getComments(id);
