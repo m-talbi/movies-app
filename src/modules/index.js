@@ -18,9 +18,11 @@ const showNames = [
   'La casa de papel',
   'The 100',
   'Loki',
-  'Seal Team'
+  'Seal Team',
+  'Chuck',
+  'Silicon Valley',
+  'Nikita'
 ];
 
 const showReqs = showNames.map((name) => getShowByName(name));
-
 Promise.all(showReqs).then((res) => renderMovies(res));

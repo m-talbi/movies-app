@@ -1,5 +1,3 @@
-import { getMovies } from "../TvMazeService/TvMazeService";
-
 const generateMovie = (movie) => `
     <div class="movie-card">
         <img src="${movie.image.medium}" class="card-img" alt="movie image" />
