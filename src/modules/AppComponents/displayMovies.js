@@ -14,6 +14,7 @@ const generateMovie = (movie) => `
           <button class="card-btn">See more</button>
           <div class="likes-container">
             <i class="fa-solid fa-heart"></i>
+            <span>45</span>
           </div>
           </div>
         </div>
