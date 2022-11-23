@@ -1,9 +1,8 @@
 const BASE_ROUTE = 'https://api.tvmaze.com';
-const SHOW_ROUTE = `${BASE_ROUTE}/show/`;
 
 export const getMovies = async () => {
   try {
-    const response = await fetch(`${SHOW_ROUTE}`);
+    const response = await fetch(`${BASE_ROUTE}/show`);
 
     if (!response.ok) return [];
     return response.json();
@@ -11,3 +10,22 @@ export const getMovies = async () => {
     return [];
   }
 };
+
+const getShowByName = async (showName) => {
+  try {
+    const response = await fetch(`${BASE_ROUTE}/search/shows?q=${showName}`);
+    if (!response.ok) {
+      return {
+        result: 'Not Found',
+      };
+    }
+    const show = await response.json();
+    return show[0].show;
+  } catch (error) {
+    return {
+      result: error.message,
+    };
+  }
+};
+
+export default getShowByName;

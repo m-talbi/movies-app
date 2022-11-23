@@ -14,15 +14,13 @@ const generateMovie = (movie) => `
           <button class="card-btn">See more</button>
           <div class="likes-container">
             <i class="fa-solid fa-heart"></i>
-            <span>45</span>
           </div>
           </div>
         </div>
     </div>
 `;
 
-const renderMovies = async () => {
-  const movies = await getMovies();
+const renderMovies = async (movies) => {
   const moviesContainer = document.querySelector('.movies-list');
   movies.forEach((movie) => {
     moviesContainer.insertAdjacentHTML('beforeend', generateMovie(movie));
