@@ -122,8 +122,10 @@ main {
 }
 
 .action {
-  text-align: center;
   padding: 10px;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .action .card-btn {
@@ -131,9 +133,16 @@ main {
   padding: 12px;
   border-radius: 4px;
   background-color: #ffc300;
-  margin-left: auto;
-  margin-right: auto;
+  border: none;
   margin-top: 10px;
+}
+
+.action .likes-container {
+  align-items: flex-end;
+}
+
+.action .likes-container i {
+  font-size: 50px;
 }
 
 footer {

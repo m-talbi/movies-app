@@ -12,6 +12,9 @@ const generateMovie = (movie) => `
           </ul>
           <div class="action">
           <button class="card-btn">See more</button>
+          <div class="likes-container">
+            <i class="fa-solid fa-heart"></i>
+          </div>
           </div>
         </div>
     </div>
