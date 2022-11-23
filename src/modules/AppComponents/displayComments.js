@@ -1,4 +1,4 @@
-import { getComments } from '../InvolvementService/InvolvementService.js';
+import { getComments } from '../InvolvementService/commentService.js';
 
 const generateComment = (comment) => `
     <article class="comment">
