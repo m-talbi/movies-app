@@ -29,7 +29,7 @@ const renderCommentPopup = async (movie) => {
             <form class="form__comment" action="">
               <input type="text" placeholder="Name" name="user" id="user-field" required>
               <textarea placeholder="Type comment here.." name="comment" id="comment-field" required></textarea>
-              <button>SUBMIT</button>
+              <button type="submit">SUBMIT</button>
             </form>
           </article>
           <figure class="movie-figure">
