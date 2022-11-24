@@ -1,9 +1,9 @@
 const BASE_ROUTE = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const APP_KEY = '8o1u2AYOtlORRdJgAQd1';
 
-export const getLikes = async (movieId) => {
+export const getLikes = async () => {
   try {
-    const response = await fetch(`${BASE_ROUTE}/${APP_KEY}/likes?item_id=${movieId}`);
+    const response = await fetch(`${BASE_ROUTE}/${APP_KEY}/likes`);
 
     if (!response.ok) return [];
     return response.json();
@@ -12,12 +12,14 @@ export const getLikes = async (movieId) => {
   }
 };
 
-export const AddLike = async (comment) => {
+export const AddLike = async (showId) => {
   await fetch(`${BASE_ROUTE}/${APP_KEY}/likes`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
     },
-    body: JSON.stringify(comment),
+    body: JSON.stringify({
+      item_id: showId,
+    }),
   });
 };

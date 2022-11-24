@@ -1,8 +1,10 @@
-import renderMovies from './AppComponents/displayMovies';
-import getShowByName from './TvMazeService/TvMazeService';
+import displayLikes from './AppComponents/displayLikes.js';
+import renderMovies from './AppComponents/displayMovies.js';
+import { getLikes } from './InvolvementService/LikeService.js';
+import { getShowByName } from './TvMazeService/TvMazeService.js';
 
 const showNames = [
-  'Vikings',
+  'Homeland',
   'The last kingdom',
   'Breaking bad',
   'The Witcher',
@@ -21,8 +23,14 @@ const showNames = [
   'Seal Team',
   'Chuck',
   'Silicon Valley',
-  'Nikita'
+  'Nikita',
 ];
 
+const showLikes = getLikes();
 const showReqs = showNames.map((name) => getShowByName(name));
-Promise.all(showReqs).then((res) => renderMovies(res));
+
+Promise.all([Promise.all(showReqs), showLikes])
+  .then((res) => {
+    renderMovies(res[0]);
+    displayLikes(res[1]);
+  });
