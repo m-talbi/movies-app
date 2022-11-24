@@ -1,11 +1,12 @@
-import { getComments } from '../InvolvementService/commentService.js';
+import { getComments } from '../InvolvementService/CommentService.js';
+
 
 const generateComment = (comment) => `
     <article class="comment">
       <p><strong>${comment.username}</strong> - ${comment.creation_date}</p>
       <p>${comment.comment}</p>
     </article>
-  `;
+`;
 
 const renderComments = async (id, commentPopupEl) => {
   const comments = await getComments(id);
