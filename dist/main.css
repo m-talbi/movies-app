@@ -81,11 +81,13 @@ main {
   margin-right: auto;
   text-align: center;
   font-size: 30px;
+  font-style: normal;
   padding-top: 30px;
   color: #ebf0ee;
 }
 
 .show-number {
+  font-weight: 700;
   color: #ffc300;
 }
 
