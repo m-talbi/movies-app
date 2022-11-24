@@ -1,5 +1,6 @@
 import { AddComment } from '../InvolvementService/CommentService.js';
 import renderComments from '../AppComponents/displayComments.js';
+import showLoadingSkeleton from './loadingSkeleton.js';
 
 const handleFormSubmit = (form) => {
   const commentPopupEl = form.closest('section');
@@ -16,6 +17,7 @@ const handleFormSubmit = (form) => {
     };
 
     form.reset();
+    showLoadingSkeleton(commentPopupEl);
     await AddComment(comment);
     await renderComments(commentPopupEl.id, commentPopupEl);
   });

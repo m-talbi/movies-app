@@ -1,6 +1,7 @@
 import { handleOutsideClick, handleCloseBtnClick } from '../Helpers/handleCommentClose.js';
 import handleFormSubmit from '../Helpers/handleCommentSubmit.js';
 import renderComments from './displayComments.js';
+import showLoadingSkeleton from '../Helpers/loadingSkeleton.js';
 
 const generateGenres = (genresList) => genresList.reduce((List, genre) => `${List}<li>${genre}</li>`, '');
 
@@ -22,13 +23,13 @@ const renderCommentPopup = async (movie) => {
               <a href="${movie.officialSite}" target="_blank" class="btn-outlined">Watch Trailer</a>
             </div>
             <div class="movie__comments">
-              <h3>Comments (0)</h3>
+              <h3>Comments</h3>
               <div class="comment_cards__container"></div>
             </div>
             <form class="form__comment" action="">
               <input type="text" placeholder="Name" name="user" id="user-field" required>
               <textarea placeholder="Type comment here.." name="comment" id="comment-field" required></textarea>
-              <button>SUBMIT</button>
+              <button type="submit">SUBMIT</button>
             </form>
           </article>
           <figure class="movie-figure">
@@ -45,6 +46,7 @@ const renderCommentPopup = async (movie) => {
   handleOutsideClick(commentPopupEl);
   handleCloseBtnClick(commentPopupEl);
   handleFormSubmit(form);
+  showLoadingSkeleton(commentPopupEl);
   await renderComments(movie.id, commentPopupEl);
 };
 
