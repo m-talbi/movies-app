@@ -1,10 +1,9 @@
 import mapShowDto from '../Helpers/createShowObj.js';
+import generateGenres from '../Helpers/generateList.js';
 import { AddLike, getLikes } from '../InvolvementService/LikeService.js';
 import { getShowById } from '../TvMazeService/TvMazeService.js';
 import displayLikes from './displayLikes.js';
 import renderCommentPopup from './displayPopUp.js';
-
-const generateGenres = (genresList) => genresList.reduce((List, genre) => `${List}<li>${genre}</li>`, '');
 
 const generateMovie = (movie) => `
   <article id=${movie.id} class="movie-card">

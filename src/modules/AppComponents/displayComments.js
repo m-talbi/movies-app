@@ -1,6 +1,5 @@
 import { getComments } from '../InvolvementService/CommentService.js';
 
-
 const generateComment = (comment) => `
     <article class="comment">
       <p><strong>${comment.username}</strong> - ${comment.creation_date}</p>
