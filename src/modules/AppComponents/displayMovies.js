@@ -7,7 +7,7 @@ import renderCommentPopup from './displayPopUp.js';
 
 const generateMovie = (movie) => `
   <article id=${movie.id} class="movie-card">
-    <img src="${movie.image.medium}" class="card-img" alt="movie image" />
+    <img src="${movie.image.medium}" class="card-img" alt="${movie.name} show poster" />
     <div class="card-footer">
       <h3 class="movie-title">${movie.name}</h3>
       <ul class="movie-tags">

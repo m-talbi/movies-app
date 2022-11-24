@@ -35,7 +35,7 @@ const renderCommentPopup = async (movie) => {
           </article>
           <figure class="movie-figure">
             <i id="close-popup-icon" class="fa-solid fa-circle-xmark"></i>
-            <img class="movie-image" src="${movie.image}" />
+            <img class="movie-image" src="${movie.image}" alt="${movie.name} show poster" />
           </figure>
         </div>
       </section>
