@@ -4,7 +4,7 @@
 
 import displayShowCounter from '../AppComponents/displayShowCounter.js';
 import { getShowByName } from '../TvMazeService/TvMazeService.js';
- 
+
 const mockResponse = [
   {
     id: '82',
@@ -33,12 +33,12 @@ const mockResponse = [
     image: 'https://static.tvmaze.com/uploads/images/original_untouched/0/2400.jpg',
   },
 ];
- 
+
 global.fetch = jest.fn(() => Promise.resolve({
   ok: true,
   json: () => Promise.resolve(mockResponse),
 }));
- 
+
 describe('Items counter test', () => {
   test('Check if movies get displayed on the main page', async () => {
     document.body.innerHTML = `
@@ -47,18 +47,18 @@ describe('Items counter test', () => {
         <div class="movies-list"></div>
       </main>
     `;
- 
+
     const initialCounterValue = document.querySelector('.show-number').textContent;
- 
+
     const show1 = await getShowByName('Game of Thrones');
     const show2 = await getShowByName('Breaking Bad');
- 
+
     const shows = [show1, show2];
- 
+
     displayShowCounter(shows);
- 
+
     const updatedCounterValue = document.querySelector('.show-number').textContent;
- 
+
     expect(fetch).toHaveBeenCalledTimes(2);
     expect(initialCounterValue).not.toBe(updatedCounterValue);
   });
