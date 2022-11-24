@@ -1,5 +1,5 @@
 .movie_popup__wrapper {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: rgba(36, 36, 36, 0.548);
@@ -7,11 +7,12 @@
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  z-index: 99;
 }
 
 .card {
   width: 80%;
-  height: 700px;
+  height: 85vh;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
@@ -224,7 +225,7 @@ form {
   display: none;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1368px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   .card {
     width: 90%;
   }

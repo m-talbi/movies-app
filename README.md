@@ -28,7 +28,7 @@ The Movies App project is a small application that displays some of the popular 
 
 👤 **Author**
 
-- GitHub: [Aster Alemu](https://github.com/aster-alemu)
+- GitHub: [Sammy Ndabo](https://github.com/Ndaboom)
 
 
 ## 🤝 Contributing

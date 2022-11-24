@@ -75,6 +75,22 @@ main {
   background-color: #2a272f;
 }
 
+.counter-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 23px;
+  font-style: normal;
+  padding-top: 30px;
+  color: #ebf0ee;
+}
+
+.show-number {
+  font-weight: 700;
+  color: #ffc300;
+}
+
 .movies-list {
   display: grid;
   max-width: 90%;
@@ -169,7 +185,7 @@ footer {
 }
 
 .movie_popup__wrapper {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: rgba(36, 36, 36, 0.548);
@@ -177,11 +193,12 @@ footer {
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  z-index: 99;
 }
 
 .card {
   width: 80%;
-  height: 700px;
+  height: 85vh;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
@@ -381,7 +398,7 @@ form {
   display: none;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1368px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   .card {
     width: 90%;
   }

@@ -1,8 +1,11 @@
+import displayLikes from './AppComponents/displayLikes.js';
 import renderMovies from './AppComponents/displayMovies.js';
-import getShowByName from './TvMazeService/TvMazeService.js';
+import displayShowCounter from './AppComponents/displayShowCounter.js';
+import { getLikes } from './InvolvementService/LikeService.js';
+import { getShowByName } from './TvMazeService/TvMazeService.js';
 
 const showNames = [
-  'Vikings',
+  'Homeland',
   'The last kingdom',
   'Breaking bad',
   'The Witcher',
@@ -24,5 +27,12 @@ const showNames = [
   'Nikita',
 ];
 
+const showLikes = getLikes();
 const showReqs = showNames.map((name) => getShowByName(name));
-Promise.all(showReqs).then((res) => renderMovies(res));
+
+Promise.all([Promise.all(showReqs), showLikes])
+  .then((res) => {
+    renderMovies(res[0]);
+    displayShowCounter(res[0]);
+    displayLikes(res[1]);
+  });
