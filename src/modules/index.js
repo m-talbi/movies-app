@@ -1,6 +1,6 @@
 import displayLikes from './AppComponents/displayLikes.js';
 import renderMovies from './AppComponents/displayMovies.js';
-import displayShowCounter from './AppComponents/displayShowCounter'
+import displayShowCounter from './AppComponents/displayShowCounter.js';
 import { getLikes } from './InvolvementService/LikeService.js';
 import { getShowByName } from './TvMazeService/TvMazeService.js';
 
