@@ -1,5 +1,6 @@
 import displayLikes from './AppComponents/displayLikes.js';
 import renderMovies from './AppComponents/displayMovies.js';
+import displayShowCounter from './AppComponents/displayShowCounter'
 import { getLikes } from './InvolvementService/LikeService.js';
 import { getShowByName } from './TvMazeService/TvMazeService.js';
 
@@ -32,5 +33,6 @@ const showReqs = showNames.map((name) => getShowByName(name));
 Promise.all([Promise.all(showReqs), showLikes])
   .then((res) => {
     renderMovies(res[0]);
+    displayShowCounter(res[0]);
     displayLikes(res[1]);
   });

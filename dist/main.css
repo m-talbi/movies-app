@@ -75,6 +75,20 @@ main {
   background-color: #2a272f;
 }
 
+.counter-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
+  color: #ebf0ee;
+}
+
+.show-number {
+  color: #ffc300;
+}
+
 .movies-list {
   display: grid;
   max-width: 90%;
