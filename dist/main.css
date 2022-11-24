@@ -85,7 +85,7 @@ main {
 
 .movie-card {
   background-color: #24242c;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-radius: 8px;
   transition: transform 300ms ease-in-out;
   overflow: hidden;
@@ -101,16 +101,16 @@ main {
 }
 
 .movie-card h3 {
-  color: #EBF0EE;
+  color: #ebf0ee;
   font-weight: 600;
   font-size: 23px;
 }
 
 .movie-card li {
   display: inline-block;
-  background: #EBF0EE;
+  background: #ebf0ee;
   border-radius: 4px;
-  color: #172B4D;
+  color: #172b4d;
   padding: 5px;
   font-size: 10px;
   font-weight: bold;
