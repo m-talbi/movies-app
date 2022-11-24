@@ -1,4 +1,3 @@
-const { resolve } = require('path');
 // eslint-disable-next-line
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // eslint-disable-next-line
@@ -32,8 +31,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      title: 'Movies app',
-      template: resolve(__dirname, 'src', 'index.html'),
+      title: 'Movies App',
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
   ],
