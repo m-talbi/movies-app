@@ -1,7 +1,7 @@
 import { AddComment } from '../InvolvementService/CommentService.js';
 import renderComments from '../AppComponents/displayComments.js';
 
-const handleFormSubmit = async (form) => {
+const handleFormSubmit = (form) => {
   const commentPopupEl = form.closest('section');
 
   form.addEventListener('submit', async (ev) => {
