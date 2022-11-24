@@ -6,7 +6,7 @@ export const handleOutsideClick = (component) => {
     document.body.style.overflowY = 'scroll';
   });
 };
- 
+
 export const handleCloseBtnClick = (commentsPopupEl) => {
   const btn = commentsPopupEl.querySelector('#close-popup-icon');
   btn.addEventListener('click', () => {

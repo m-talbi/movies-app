@@ -7,5 +7,5 @@ const createShowObj = (show, likes) => ({
   officialSite: show.officialSite,
   image: show.image.original,
 });
- 
+
 export default createShowObj;
