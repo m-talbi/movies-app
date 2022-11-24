@@ -1,5 +1,5 @@
-import displayLikes from "../AppComponents/displayLikes";
-import { AddLike, getLikes } from "../InvolvementService/LikeService";
+import displayLikes from "../AppComponents/displayLikes.js";
+import { AddLike, getLikes } from "../InvolvementService/LikeService.js";
 
 const handlePopupLikeBtn = async (movieId) => {
   await AddLike(movieId);
