@@ -1,4 +1,4 @@
-import { AddComment } from '../InvolvementService/commentService.js';
+import { AddComment } from '../InvolvementService/CommentService.js';
 import renderComments from '../AppComponents/displayComments.js';
 
 const handleFormSubmit = (form) => {

@@ -1,5 +1,5 @@
-import renderMovies from './AppComponents/displayMovies';
-import getShowByName from './TvMazeService/TvMazeService';
+import renderMovies from './AppComponents/displayMovies.js';
+import getShowByName from './TvMazeService/TvMazeService.js';
 
 const showNames = [
   'Vikings',
@@ -21,7 +21,7 @@ const showNames = [
   'Seal Team',
   'Chuck',
   'Silicon Valley',
-  'Nikita'
+  'Nikita',
 ];
 
 const showReqs = showNames.map((name) => getShowByName(name));

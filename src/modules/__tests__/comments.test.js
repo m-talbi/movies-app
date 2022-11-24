@@ -3,7 +3,7 @@
  */
 
 import renderComments from '../AppComponents/displayComments.js';
-import { AddComment } from '../InvolvementService/commentService.js';
+import { AddComment } from '../InvolvementService/CommentService.js';
 
 const mockPopupData = [
   {
