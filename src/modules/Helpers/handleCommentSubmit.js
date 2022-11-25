@@ -9,9 +9,10 @@ const handleFormSubmit = (form) => {
     ev.preventDefault();
     const userField = form.querySelector('#user-field');
     const commentField = form.querySelector('#comment-field');
+    const id = commentPopupEl.id.replace('popup-', '');
 
     const comment = {
-      item_id: commentPopupEl.id,
+      item_id: id,
       username: userField.value,
       comment: commentField.value,
     };
@@ -19,7 +20,7 @@ const handleFormSubmit = (form) => {
     form.reset();
     showLoadingSkeleton(commentPopupEl);
     await AddComment(comment);
-    await renderComments(commentPopupEl.id, commentPopupEl);
+    await renderComments(id, commentPopupEl);
   });
 };
 
