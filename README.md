@@ -28,6 +28,12 @@
 
 **Series Guide Application** is a small application that displays some of the popular shows in the world. It also allows users to share their comments and feedback about their favored shows and give a thumbs up thanks to the external Involvment and TVMaze API services.
 
+## Assessment links
+
+- [Kanban board](https://github.com/users/Kweeka1/projects/3)
+- [PR - Mohamed Talbi](https://github.com/Kweeka1/movies-app/pull/26)
+- [PR - Sammy Ndabo](https://github.com/Kweeka1/movies-app/pull/22)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
