@@ -1,0 +1,492 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \****************************************************************************************************************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  background-color: #24242c;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.nav-logo i {
+  color: #ffc300;
+  font-size: 40px;
+}
+
+.nav-logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-logo p {
+  text-decoration: none;
+  color: #ffc300;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-list .list-item {
+  list-style-type: none;
+}
+
+.menu-list .list-item a {
+  text-decoration: none;
+  color: #cfcfd1;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.main-section {
+  background-color: #2a272f;
+}
+
+.counter-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 23px;
+  font-style: normal;
+  padding-top: 30px;
+  color: #ebf0ee;
+}
+
+.show-number {
+  font-weight: 700;
+  color: #ffc300;
+}
+
+.movies-list {
+  display: grid;
+  max-width: 90%;
+  margin: 30px auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #24242c;
+  border: 1px solid #999;
+  border-radius: 8px;
+  transition: transform 300ms ease-in-out;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+}
+
+.movie-card h3 {
+  color: #ebf0ee;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.movie-card li {
+  display: inline-block;
+  background: #ebf0ee;
+  border-radius: 4px;
+  color: #172b4d;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.card-footer {
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action .card-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ffc300;
+  border: none;
+  cursor: pointer;
+}
+
+.action .likes-container {
+  align-items: flex-end;
+}
+
+.action .likes-container i {
+  font-size: 40px;
+}
+
+.action .likes-container .likes {
+  font-size: 40px;
+  color: #ebf0ee;
+}
+
+.likes-container span {
+  color: #ffc300;
+}
+
+footer {
+  background-color: #24242c;
+  padding: 1rem;
+  text-align: center;
+  color: #cfcfd1;
+}
+
+.footer-link {
+  color: #ffc300 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .menu-list {
+    flex-direction: column;
+  }
+}
+.movie_popup__wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 14, 14, 0.274);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  z-index: 99;
+}
+
+.card {
+  width: 80%;
+  height: 85vh;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.7), 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+  width: 55%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  color: #bdb8b8;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.card-body > p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.movie_likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.movie-figure {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+.movie-figure::after {
+  content: "";
+  z-index: 2;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(1, 0, 18, 0.9) 10%, rgba(1, 0, 18, 0.7) 25%, transparent 100%);
+  height: 100%;
+  width: 55%;
+}
+
+.movie-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  color: #e8e8e8;
+  font-size: 22px;
+  letter-spacing: 5px;
+}
+
+.genres {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.genres li {
+  font-size: 13px;
+  color: #f1c40f;
+}
+
+.btn-outlined {
+  text-decoration-line: none;
+  font-style: normal;
+  background: transparent;
+  color: #f1c40f;
+  border: 2px solid #f1c40f;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-outlined:hover {
+  background: #f1c40f;
+  color: #000;
+}
+
+.fa-heart {
+  background-color: transparent;
+  color: #e8e8e8;
+  transition: all 0.2s ease-in-out;
+  font-size: 26px;
+  padding: 0.5rem;
+  border-radius: 1.625rem;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  background-color: transparent;
+  color: #f1c40f;
+}
+
+.movie__comments {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment_cards__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment {
+  padding: 1rem;
+  background-color: #242526;
+  border-radius: 10px;
+}
+.comment > p:first-child {
+  font-size: 16px;
+}
+.comment > p:last-child {
+  font-size: 13.5px;
+}
+
+.form__comment {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form__comment > input,
+.form__comment button {
+  width: 40%;
+}
+.form__comment > input {
+  background-color: rgb(75, 75, 75);
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  color: #e8e8e8;
+  border: none;
+  padding: 0.7rem 0.5rem;
+  border-radius: 4px;
+}
+.form__comment > textarea {
+  background-color: rgb(75, 75, 75);
+  border: none;
+  color: #e8e8e8;
+  resize: none;
+  font-size: 14px;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  height: 180px;
+  width: 100%;
+}
+.form__comment > input:focus,
+.form__comment textarea:focus {
+  outline: none;
+}
+.form__comment > button {
+  font-family: "Poppins", sans-serif;
+  background-color: #af9012;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+.form__comment > button:hover {
+  background-color: #cca819;
+}
+
+form {
+  width: 100%;
+}
+
+#close-popup-icon {
+  position: absolute;
+  color: rgb(245, 245, 245);
+  font-size: 33px;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #close-popup-icon {
+    position: absolute;
+    color: rgb(245, 245, 245);
+    font-size: 33px;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 3;
+  }
+  .card {
+    flex-direction: column-reverse;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .card-body {
+    width: 100%;
+    overflow-x: initial;
+    overflow-y: initial;
+  }
+  .movie-figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie-figure::after {
+    background: none;
+  }
+  .movie-figure .movie-image {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+  .form__comment > input,
+  .form__comment button {
+    width: 100%;
+  }
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0deg, 0%, 45%);
+  }
+  100% {
+    background-color: hsl(240deg, 0%, 61%);
+  }
+}
+.fullwidth {
+  width: 100%;
+}
+
+.skeleton__wrapper {
+  width: 100%;
+}
+
+.skeleton {
+  opacity: 0.9;
+  animation: skeleton-loading 0.7s linear infinite alternate;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 4px;
+}
+
+.skeleton-text:first-child {
+  width: 40%;
+}
+
+.skeleton-text:last-child {
+  margin-bottom: 0;
+  width: 80%;
+}
