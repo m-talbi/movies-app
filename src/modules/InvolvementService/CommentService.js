@@ -2,7 +2,7 @@ const BASE_ROUTE = 'https://us-central1-involvement-api.cloudfunctions.net/capst
 
 export const getComments = async (movieId) => {
   try {
-    const response = await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY}/comments?item_id=${movieId}`);
+    const response = await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY || '8o1u2AYOtlORRdJgAQd1'}/comments?item_id=${movieId}`);
 
     if (!response.ok) return [];
     return response.json();
@@ -12,7 +12,7 @@ export const getComments = async (movieId) => {
 };
 
 export const AddComment = async (comment) => {
-  await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY}/comments`, {
+  await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY || '8o1u2AYOtlORRdJgAQd1'}/comments`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',

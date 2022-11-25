@@ -2,7 +2,7 @@ const BASE_ROUTE = 'https://us-central1-involvement-api.cloudfunctions.net/capst
 
 export const getLikes = async () => {
   try {
-    const response = await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY}/likes`);
+    const response = await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY || '8o1u2AYOtlORRdJgAQd1'}/likes`);
 
     if (!response.ok) return [];
     return response.json();
@@ -12,7 +12,7 @@ export const getLikes = async () => {
 };
 
 export const AddLike = async (showId) => {
-  await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY}/likes`, {
+  await fetch(`${BASE_ROUTE}/${process.env.INVOLVEMENT_KEY || '8o1u2AYOtlORRdJgAQd1'}/likes`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
