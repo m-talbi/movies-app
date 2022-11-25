@@ -2,6 +2,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // eslint-disable-next-line
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// eslint-disable-next-line
+const dotenv = require('dotenv');
+// eslint-disable-next-line
+const { DefinePlugin } = require('webpack');
 
 module.exports = {
   entry: ['./src/styles/index.scss', './src/modules/index.js'],
@@ -35,5 +39,8 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
+    new DefinePlugin({
+      'process.env': JSON.stringify(dotenv.config().parsed),
+    }),
   ],
 };

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "css-loader": "^6.7.1",
+    "dotenv": "^16.0.3",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
