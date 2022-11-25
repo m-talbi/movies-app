@@ -14,7 +14,7 @@ const generateMovie = (movie) => `
         ${generateGenres(movie.genres)}
       </ul>
       <div class="action">
-        <button class="card-btn">See more</button>
+        <button class="card-btn">Comments</button>
         <div class="likes-container">
           <i class="fa-solid fa-heart"></i>
           <span class="likes"></span>

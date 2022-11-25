@@ -42,10 +42,10 @@ global.fetch = jest.fn(() => Promise.resolve({
 describe('Items counter test', () => {
   test('Check if movies get displayed on the main page', async () => {
     document.body.innerHTML = `
-      <main class="main-section">
-        <p class="counter-container">Displaying <span class="show-number"></span> shows:</p>
-        <div class="movies-list"></div>
-      </main>
+    <a href="#" class="nav-logo">
+      <i class="fa-solid fa-film"></i>
+      <p>TV SHOW <span class="show-number"></span></p>
+    </a>
     `;
 
     const initialCounterValue = document.querySelector('.show-number').textContent;
