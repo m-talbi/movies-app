@@ -184,6 +184,16 @@ footer {
   color: #ffc300 !important;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .menu-list {
+    flex-direction: column;
+  }
+}
 .movie_popup__wrapper {
   position: fixed;
   width: 100%;
@@ -438,7 +448,6 @@ form {
 @media screen and (max-width: 600px) {
   .card {
     width: 90%;
-    height: 700px;
   }
   .form__comment > input,
   .form__comment button {

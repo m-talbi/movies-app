@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "live-server --no-browser --watch=./dist --open=./dist/",
+    "start": "live-server --no-browser --host='0.0.0.0' --watch=./dist --open=./dist/",
     "dev": "webpack --mode=development --watch",
     "build": "webpack --mode=production --watch"
   },

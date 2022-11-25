@@ -173,3 +173,15 @@ footer {
 .footer-link {
   color: #ffc300 !important;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu-list {
+    flex-direction: column;
+  }
+}
