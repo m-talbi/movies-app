@@ -172,9 +172,9 @@ npm install gh-pages --save-dev
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [] **Add loading skeleton to show item cards**
-- [] **Add a search bar to search for a specific show**
-- [] **Add category links in the header section**
+- [ ] **Add loading skeleton to show item cards**
+- [ ] **Add a search bar to search for a specific show**
+- [ ] **Add category links in the header section**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
