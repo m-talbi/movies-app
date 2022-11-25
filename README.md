@@ -5,7 +5,7 @@ The Movies App project is a small application that displays some of the popular 
 ## Built With
 
 - HTML
-- CSS
+- SCSS
 - Javascript
 - Webpack
 
