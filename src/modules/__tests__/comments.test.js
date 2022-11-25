@@ -34,30 +34,30 @@ const mockPopupData = [
   },
 ];
 
-const mockResponse = [
-  {
-    creation_date: '2022-11-21',
-    username: 'Mohamed Talbi',
-    comment: 'Very good show, I like the ending',
-  },
-  {
-    comment: 'Cool show',
-    username: 'Peter',
-    creation_date: '2022-11-21',
-  },
-  {
-    creation_date: '2022-11-22',
-    username: 'Kweeka',
-    comment: 'Good show',
-  },
-];
-
-global.fetch = jest.fn(() => Promise.resolve({
-  ok: true,
-  json: () => Promise.resolve(mockResponse),
-}));
-
 describe('Comments counter', () => {
+  const mockResponse = [
+    {
+      creation_date: '2022-11-21',
+      username: 'Mohamed Talbi',
+      comment: 'Very good show, I like the ending',
+    },
+    {
+      comment: 'Cool show',
+      username: 'Peter',
+      creation_date: '2022-11-21',
+    },
+    {
+      creation_date: '2022-11-22',
+      username: 'Kweeka',
+      comment: 'Good show',
+    },
+  ];
+
+  global.fetch = jest.fn(() => Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve(mockResponse),
+  }));
+
   test('AddComment and renderComments methods should update the counter on the page', async () => {
     document.body.innerHTML = `
      <section id="169" class="movie_popup__wrapper">
