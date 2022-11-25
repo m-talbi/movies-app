@@ -158,11 +158,11 @@ npm install gh-pages --save-dev
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author 1**
+👤 **Mohamed Talbi**
 
 - GitHub: [Mohamed Talbi](https://github.com/Kweeka1)
 
-👤 **Author 2**
+👤 **Sammy Ndabo**
 
 - GitHub: [Sammy Ndabo](https://github.com/Ndaboom)
 
@@ -175,6 +175,7 @@ npm install gh-pages --save-dev
 - [ ] **Add loading skeleton to show item cards**
 - [ ] **Add a search bar to search for a specific show**
 - [ ] **Add category links in the header section**
+- [ ] **Load progressively show's comments**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
