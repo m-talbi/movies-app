@@ -26,7 +26,7 @@
 
 # 📖 Series Guide Application <a name="about-project"></a>
 
-**Series Guide Application** is a small application that displays some of the popular shows in the world. It also allows users to share their comments and feedback about their favored shows and give a thumbs up thanks to the external Involvment and TVMaze API services.
+**Series Guide Application** is a small application that displays some of the popular shows in the world. It also allows users to share their comments and feedback about their favored shows and give a thumbs up thanks to the external Involvement and TVMaze API services.
 
 ## Assessment links
 
