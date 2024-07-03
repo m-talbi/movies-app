@@ -30,9 +30,9 @@
 
 ## Assessment links
 
-- [Kanban board](https://github.com/users/Kweeka1/projects/3)
-- [PR - Mohamed Talbi](https://github.com/Kweeka1/movies-app/pull/26)
-- [PR - Sammy Ndabo](https://github.com/Kweeka1/movies-app/pull/22)
+- [Kanban board](https://github.com/users/m-talbi/projects/3)
+- [PR - Mohamed Talbi](https://github.com/m-talbi/movies-app/pull/26)
+- [PR - Sammy Ndabo](https://github.com/m-talbi/movies-app/pull/22)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -166,7 +166,7 @@ npm install gh-pages --save-dev
 
 👤 **Mohamed Talbi**
 
-- GitHub: [Mohamed Talbi](https://github.com/Kweeka1)
+- GitHub: [Mohamed Talbi](https://github.com/m-talbi)
 
 👤 **Sammy Ndabo**
 
@@ -191,7 +191,7 @@ npm install gh-pages --save-dev
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Kweeka1/movies-app/issues).
+Feel free to check the [issues page](https://github.com/m-talbi/movies-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
